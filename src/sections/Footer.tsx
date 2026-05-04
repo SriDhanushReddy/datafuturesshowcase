@@ -14,7 +14,6 @@ export default function Footer() {
         <p className="text-sm text-[#7A8BA5] mb-1">
           By Sri Dhanush Reddy Kondapalli
         </p>
-        <p className="text-xs text-[#7A8BA5]/70 mb-4">May 2025</p>
 
         <p className="text-sm text-[#3B82F6] italic">
           "The future belongs to those who understand data."
