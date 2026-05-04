@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 40% 4%;
+    --foreground: 216 20% 93%;
+    --card: 220 35% 7%;
+    --card-foreground: 216 20% 93%;
+    --popover: 220 35% 7%;
+    --popover-foreground: 216 20% 93%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 30% 12%;
+    --secondary-foreground: 216 20% 93%;
+    --muted: 220 25% 20%;
+    --muted-foreground: 215 18% 55%;
+    --accent: 187 94% 43%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 218 30% 18%;
+    --input: 218 30% 18%;
+    --ring: 217 91% 60%;
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #3B82F6, #06B6D4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-blue {
+    background: linear-gradient(135deg, #3B82F6, #06B6D4);
+  }
+
+  .bg-surface {
+    background-color: #0D1526;
+  }
+
+  .bg-section-alt {
+    background-color: #0A1120;
+  }
+
+  .border-subtle {
+    border-color: #1A2744;
+  }
+
+  .text-primary-light {
+    color: #E8ECF1;
+  }
+
+  .text-secondary-muted {
+    color: #7A8BA5;
+  }
+
+  .accent-blue {
+    color: #3B82F6;
+  }
+
+  .accent-cyan {
+    color: #06B6D4;
+  }
+
+  .accent-amber {
+    color: #F59E0B;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A2744;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* Selection */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #E8ECF1;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
